@@ -19,23 +19,28 @@
   <p> Modify Threshold: </p>
 </div>
 
-success: {{ students }}
+<!-- success: {{ students }} <br> -->
 
-error: {{error }}
+<!-- pretty: {{ prettyStudents }}
+
+error: {{error }} -->
 
 <p> Click <a ng-click="loadStudentInfo()">here</a> to load data.</p>
-<!-- <table>
-    <tr>
+<table>
+<!--     <tr>
         <th>Id</th>
         <th>First Name</th>
         <th>Last Name</th>
-    </tr>
-    <tr ng-repeat="person in people">
+    </tr> -->
+<!--     <tr ng-repeat="person in people">
         <td>{{person.id}}</td>
         <td>{{person.firstName}}</td>
         <td>{{person.lastName}}</td>
+    </tr> -->
+        <tr ng-repeat="student in students">
+        <td>{{ student }}</td>
     </tr>
-</table> -->
+</table>
 
 
     <script src="node_modules/angular/angular.js"></script>
