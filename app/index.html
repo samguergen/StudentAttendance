@@ -1,5 +1,5 @@
 <!doctype html>
-<html >
+<html ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="styles/index.css" />
   </head>
-  <body ng-app="myApp">
+  <body ng-controller="AppCtrl">
 
 <h1> Student Attendance Dashboard </h1>
 
@@ -23,10 +23,5 @@
      <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/app-ctrl.js"></script>
-
-    <script>
-    console.log('better work');
-    console.log(angular);
-    </script>
   </body>
 </html>

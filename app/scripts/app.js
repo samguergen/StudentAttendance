@@ -3,7 +3,7 @@ angular.module('myApp', ['ui.router'])
     $httpProvider.defaults.withCredentials = true;
       $stateProvider
         .state('home', {
-            url: '/',
+            url: '/home',
             templateUrl: '../index.html',
             controller: 'AppCtrl'
         });
@@ -18,8 +18,10 @@ angular.module('myApp', ['ui.router'])
     $locationProvider.html5Mode({
       enabled: true,
       requireBase: false
-    })
-  })
-    .run(function() {
-      console.log('angular app running');
     });
+  });
+    // .run(function() {
+    //   console.log('angular app running');
+    // });
+
+
