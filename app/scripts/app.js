@@ -3,15 +3,15 @@ angular
         'ngAnimate',
         'ui.router',
     ])
-    .config(function ($stateProvider, $urlRouterProvider, $locationProvider, '$httpProvider') {
+    .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 
     $httpProvider.defaults.withCredentials = true;
 
       $stateProvider
         .state('home', {
             url: '/',
-            templateUrl: 'home.html',
-            controller: 'HomeCtrl'
+            templateUrl: '../index.html',
+            controller: 'AppCtrl'
         });
         // .state('signup', {
         //     url: '/signup',

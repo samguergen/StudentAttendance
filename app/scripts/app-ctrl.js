@@ -1,5 +1,5 @@
 angular.module('myApp')
-.controller('HomeCtrl', ['$scope', function($scope){
+.controller('AppCtrl', ['$scope', '$http', function($scope, $http){
 
   console.log('inside the controller');
 
