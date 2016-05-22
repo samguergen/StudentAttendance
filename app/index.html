@@ -1,10 +1,10 @@
 <!doctype html>
 <html ng-app="myApp">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <title>Student Attendance Dashboar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
     <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body ng-controller="AppCtrl">
@@ -19,12 +19,13 @@
   <p> Modify Threshold: </p>
 </div>
 
-{{ students }}
+success 1: {{ students }}
 
-{{ succ }}
+success 2: {{ succ }}
 
+error: {{error }}
 
-<p> Click <a ng-click="loadStudentInfo()">here</a> to load data.</p>
+<p> Click <a ng-click="loadStudentJson()">here</a> to load data.</p>
 <!-- <table>
     <tr>
         <th>Id</th>

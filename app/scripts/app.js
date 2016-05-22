@@ -1,6 +1,6 @@
 angular.module('myApp', ['ui.router'])
     .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
-    $httpProvider.defaults.withCredentials = true;
+    $httpProvider.defaults.withCredentials = false;
       $stateProvider
         .state('home', {
             url: '/home',
