@@ -1,12 +1,6 @@
-angular
-    .module('myApp', [
-        'ngAnimate',
-        'ui.router',
-    ])
+angular.module('myApp', ['ui.router'])
     .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
-
     $httpProvider.defaults.withCredentials = true;
-
       $stateProvider
         .state('home', {
             url: '/',
@@ -19,14 +13,9 @@ angular
         //     controller: 'HomeCtrl'
         // });
 
-    // default fall back route
     $urlRouterProvider.otherwise('/');
-
-    // enable HTML5 Mode for SEO
     $locationProvider.html5Mode(true);
-
     })
-
-.run(function() {
-  console.log('angular app running');
-});
+    .run(function() {
+      console.log('angular app running');
+    });
