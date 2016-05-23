@@ -1,10 +1,8 @@
 angular.module('myApp')
 .controller('AppCtrl', function($scope, $http){
-
   console.log('inside the controller');
 
   $scope.students = [];
-
   $scope.absentStudents = [];
 
   $scope.loadStudentInfo = function() {
@@ -20,24 +18,21 @@ angular.module('myApp')
   };
 
   $scope.checkAttendance = function(attendanceType) {
-    console.log('check attendance func initiated');
-    console.log('attendance type is ', attendanceType);
-
-    $scope.byAbs = true;
+    // console.log('check attendance func initiated');
+    // console.log('attendance type is ', attendanceType);
+    // console.log('scope.students size is ');
+    // console.log($scope.students.length);
+    // $scope.byAbs = true;
     var absenceWindow = attendanceType;
 
-    // for (var student in $scope.students) {
-    //   if ((student[absenceWindow] == 0) || (student[absenceWindow] == "")) {
-    //      $scope.absentStudents << student;
-    //  }
-    //  return $scope.absentStudents;
-    // }
-    for (var student in $scope.students) {
-      if ((student.attendanceType == 0) || (student.attendanceType == "")) {
-         $scope.absentStudents << student;
-     }
-     return $scope.absentStudents;
-    }
+    angular.forEach($scope.students, function(student){
+       console.log(student.studentName);
+       if ((student.attendanceType == 0) || (student.attendanceType == "")) {
+        console.log('emptyyy');
+        $scope.absentStudents << student;
+      }
+      return $scope.absentStudents;
+    })
   }
 
 });
