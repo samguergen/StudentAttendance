@@ -26,16 +26,26 @@ List of Chronically Absent Students:
       <option ng-click="checkAttendance('numberOfDaysAbsentLast5Days')">numberOfDaysAbsentLast5Days</option>
    </select> -->
 
- Absence 8th Grade: <input type="radio" ng-model="value" value="Absence 8th Grade" ng-change="checkAttendance('attendance8thGrade')"> <br>
- Absence Sy1213:  <input type="radio" ng-model="value" value="Absence Sy1213" ng-change="checkAttendance('attendanceSy1213')"> <br>
-  Absence Sy1314: <input type="radio" ng-model="value" value="Absence Sy1314" ng-change="checkAttendance('attendanceSy1314')"><br>
-  Absence Sy1415: <input type="radio" ng-model="value" value="Absence Sy1415" ng-change="checkAttendance('attendanceSy1415')"><br>
-  Absence Ytd: <input type="radio" ng-model="value" value="Absence Ytd" ng-change="checkAttendance('attendanceYtd')"><br>
-  Absence YtdFilter: <input type="radio" ng-model="value" value="Absence YtdFilter" ng-change="checkAttendance('attendanceYtdFilter')"><br>
-  percentDaysLateSy1415: <input type="radio" ng-model="value" value="percentDaysLateSy1415" ng-change="checkAttendance('attendanceSy1415')" ><br>
-  percentDaysLateYtd: <input type="radio" ng-model="value" value="percentDaysLateYtd" ng-change="checkAttendance('percentDaysLateYtd')"><br>
-  numberOfDaysAbsentLast10Days: <input type="radio" ng-model="value" value="numberOfDaysAbsentLast10Days" ng-change="checkAttendance('numberOfDaysAbsentLast10Days')"><br>
-  numberOfDaysAbsentLast5Days: <input type="radio" ng-model="value" value="numberOfDaysAbsentLast5Days" ng-change="checkAttendance('numberOfDaysAbsentLast5Days')"><br>
+ Absence 8th Grade:
+ <input type="radio" ng-model="value" value="Absence 8th Grade" ng-change="checkAttendance('attendance8thGrade')"> <br>
+ Absence Sy1213:
+ <input type="radio" ng-model="value" value="Absence Sy1213" ng-change="checkAttendance('attendanceSy1213')"> <br>
+  Absence Sy1314:
+  <input type="radio" ng-model="value" value="Absence Sy1314" ng-change="checkAttendance('attendanceSy1314')"><br>
+  Absence Sy1415:
+  <input type="radio" ng-model="value" value="Absence Sy1415" ng-change="checkAttendance('attendanceSy1415')"><br>
+  Absence Ytd:
+  <input type="radio" ng-model="value" value="Absence Ytd" ng-change="checkAttendance('attendanceYtd')"><br>
+  Absence YtdFilter:
+  <input type="radio" ng-model="value" value="Absence YtdFilter" ng-change="checkAttendance('attendanceYtdFilter')"><br>
+  percentDaysLateSy1415:
+  <input type="radio" ng-model="value" value="percentDaysLateSy1415" ng-change="checkAttendance('attendanceSy1415')" ><br>
+  percentDaysLateYtd:
+  <input type="radio" ng-model="value" value="percentDaysLateYtd" ng-change="checkAttendance('percentDaysLateYtd')"><br>
+  numberOfDaysAbsentLast10Days:
+  <input type="radio" ng-model="value" value="numberOfDaysAbsentLast10Days" ng-change="checkAttendance('numberOfDaysAbsentLast10Days')"><br>
+  numberOfDaysAbsentLast5Days:
+  <input type="radio" ng-model="value" value="numberOfDaysAbsentLast5Days" ng-change="checkAttendance('numberOfDaysAbsentLast5Days')"><br>
 
 </div>
 
@@ -71,30 +81,15 @@ Absent Students for:
 <table id="table-by-absence">
 
     <tr ng-repeat="stud in absentStudents">
-        <!-- <td>{{ stud.studentId }}</td> -->
         <td>{{ stud.studentName }}</td>
         <td>{{ stud.gender }}</td>
         <td>{{ stud.schoolName }}</td>
         <td>{{ stud.cohort }}</td>
         <td>{{ stud.studentEmail }}</td>
-        <!-- <td>{{ stud.ethnicity }}</td> -->
+        <td>{{ stud.ethnicity }}</td>
     </tr>
-<!--     <tr>
-        <td>{{ stud.attendance8thGrade }}</td>
-        <td>{{ stud.attendanceSy1213 }}</td>
-        <td>{{ stud.attendanceSy1314 }}</td>
-        <td>{{ stud.attendanceSy1415 }}</td>
-        <td>{{ stud.percentDaysLateSy1415 }}</td>
-        <td>{{ stud.attendanceYtd }}</td>
-        <td>{{ stud.percentDaysLateYtd }}</td>
-        <td>{{ stud.numberOfDaysAbsentLast10Days }}</td>
-        <td>{{ stud.numberOfDaysAbsentLast5Days }}</td>
-        <td>{{ stud.attendanceYtdFilter }}</td>
-    </tr> -->
 </table>
 
-
-<!-- {{ absentStudents }} -->
 
   <script src="node_modules/angular/angular.js"></script>
   <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
