@@ -26,8 +26,14 @@ angular.module('myApp')
     $scope.byAbs = true;
     var absenceWindow = attendanceType;
 
+    // for (var student in $scope.students) {
+    //   if ((student[absenceWindow] == 0) || (student[absenceWindow] == "")) {
+    //      $scope.absentStudents << student;
+    //  }
+    //  return $scope.absentStudents;
+    // }
     for (var student in $scope.students) {
-      if ((student[absenceWindow] == 0) || (student[absenceWindow] == "")) {
+      if ((student.attendanceType == 0) || (student.attendanceType == "")) {
          $scope.absentStudents << student;
      }
      return $scope.absentStudents;
