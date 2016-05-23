@@ -1,5 +1,12 @@
 html {
   background-color: #EBEBD9;
+  border: 1px solid grey;
+  height: 100%;
+  margin: 5px;
+}
+
+body {
+  height: 100%;
 }
 
 table {
@@ -29,7 +36,8 @@ tr td {
    }*/
 
   .threshold {
-    padding: 40px;
+    padding: 5px 30px 20px 10px;
+    border: 2px solid #9A9A63;
   }
 
   .threshold-labels {
@@ -39,4 +47,15 @@ tr td {
 
   .threshold-radios {
     margin-left: 15px;
+  }
+
+  .threshold-title {
+    font-weight: bold;
+    padding: 5px;
+    text-align: right;
+    margin-right: 5%;
+  }
+
+  .title h1{
+    color: #69694A
   }
