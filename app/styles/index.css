@@ -29,5 +29,6 @@ tr td {
   }
 
   .threshold-labels {
-
+    font-weight: bold;
+    margin-left: 5px;
   }
