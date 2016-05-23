@@ -8,8 +8,6 @@
 
 <h1> Student Attendance Dashboard </h1>
 
-  <!-- <p> <a ng-click="loadStudentInfo()"> Click Here to Load All Student Data</a> </p> -->
-
 List of Chronically Absent Students:
 
 <div class="threshold">
@@ -17,7 +15,7 @@ List of Chronically Absent Students:
 <div class="absence-type">
    <select>
       <option ng-click="checkAttendance(attendance8thGrade)">Absence 8th Grade</option>
-      <option ng-click="checkAttendance(attendanceSy1213)">Absence Sy1213</option>
+      <option ng-click="checkAttendance('attendanceSy1213')">Absence Sy1213</option>
       <option ng-click="checkAttendance(attendanceSy1314)">Absence Sy1314</option>
       <option ng-click="checkAttendance(attendanceSy1415)">Absence Sy1415</option>
       <option ng-click="checkAttendance(attendanceYtd)">Absence Ytd</option>
@@ -28,6 +26,8 @@ List of Chronically Absent Students:
       <option ng-click="checkAttendance(numberOfDaysAbsentLast5Days)">numberOfDaysAbsentLast5Days</option>
    </select>
 </div>
+
+<div ng-click="checkAttendance(attendance8thGrade)">Absence 8th Grade</div>
 
 
 All Students:
