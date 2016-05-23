@@ -26,8 +26,8 @@ angular.module('myApp')
     var absenceWindow = attendanceType;
 
     angular.forEach($scope.students, function(student){
-       console.log(student.studentName);
-       if ((student.attendanceType == 0) || (student.attendanceType == "")) {
+       console.log(student.studentEmail, student.studentEmail.length);
+       if ( (student.attendanceType == 0) || (student.attendanceType == "") || (student.studentEmail.length == 0) ) {
         console.log('emptyyy');
         $scope.absentStudents << student;
       }
