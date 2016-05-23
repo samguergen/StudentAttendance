@@ -4,11 +4,11 @@
     <title>Student Attendance Dashboar</title>
     <link rel="stylesheet" href="styles/index.css" />
   </head>
-  <body ng-controller="AppCtrl" loadStudentInfo()>
+  <body ng-controller="AppCtrl" ng-init="loadStudentInfo()">
 
 <h1> Student Attendance Dashboard </h1>
 
-  <p> <a ng-click="loadStudentInfo()"> Click Here to Load All Student Data</a> </p>
+  <!-- <p> <a ng-click="loadStudentInfo()"> Click Here to Load All Student Data</a> </p> -->
 
 List of Chronically Absent Students:
 
@@ -29,7 +29,10 @@ List of Chronically Absent Students:
    </select>
 </div>
 
-<table id="all-students" ng-hide="'byAbs' == true" >
+
+All Students:
+
+<table id="table-all-students" ng-hide="'byAbs' == true" >
     <tr ng-repeat="student in students">
         <td>{{ student.studentId }}</td>
         <td>{{ student.studentName }}</td>
@@ -39,8 +42,6 @@ List of Chronically Absent Students:
         <td>{{ student.studentEmail }}</td>
         <td>{{ student.ethnicity }}</td>
     </tr>
-
-Attendance:
       <tr>
         <td>{{ student.attendance8thGrade }}</td>
         <td>{{ student.attendanceSy1213 }}</td>
@@ -55,7 +56,10 @@ Attendance:
     </tr>
 </table>
 
-<table id="by-absence" ng-show="'byAbs' == true">
+Absence Type:
+<!-- Absence Type: -->
+
+<table id="table-by-absence">
     <tr ng-repeat="student in students">
         <td>{{ student.studentId }}</td>
         <td>{{ student.studentName }}</td>
@@ -65,9 +69,7 @@ Attendance:
         <td>{{ student.studentEmail }}</td>
         <td>{{ student.ethnicity }}</td>
     </tr>
-
-Attendance:
-      <tr>
+    <tr>
         <td>{{ student.attendance8thGrade }}</td>
         <td>{{ student.attendanceSy1213 }}</td>
         <td>{{ student.attendanceSy1314 }}</td>
@@ -81,9 +83,10 @@ Attendance:
     </tr>
 </table>
 
-    <script src="node_modules/angular/angular.js"></script>
-     <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="scripts/app-ctrl.js"></script>
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/app-ctrl.js"></script>
+
   </body>
 </html>
