@@ -50,7 +50,7 @@
 
 </div>
 
-<a ui-sref="all" ng-click="loadStudentInfo()">Click here to view all student info</a>
+<div ng-click="loadStudentInfo()">Load All Student Info Here</div>
 
 <table id="table-by-absence">
 
@@ -61,6 +61,20 @@
         <td>{{ stud.cohort }}</td>
         <td>{{ stud.studentEmail }}</td>
         <td>{{ stud.ethnicity }}</td>
+    </tr>
+</table>
+
+<a ui-sref="all" ng-click="loadStudentInfo()">Click here to view all student info</a>
+
+<table id="table-by-all">
+
+    <tr ng-repeat="stu in students">
+        <td>{{ stu.studentName }}</td>
+        <td>{{ stu.gender }}</td>
+        <td>{{ stu.schoolName }}</td>
+        <td>{{ stu.cohort }}</td>
+        <td>{{ stu.studentEmail }}</td>
+        <td>{{ stu.ethnicity }}</td>
     </tr>
 </table>
 
