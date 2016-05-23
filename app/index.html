@@ -8,43 +8,32 @@
 
 <h1> Student Attendance Dashboard </h1>
 
-List of Chronically Absent Students:
 
-<div class="threshold">
-  Modify Threshold:
 <div class="absence-type">
-<!--    <select>
-      <option ng-click="checkAttendance('attendance8thGrade')">Absence 8th Grade</option>
-      <option ng-click="checkAttendance('attendanceSy1213')">Absence Sy1213</option>
-      <option ng-click="checkAttendance('attendanceSy1314')">Absence Sy1314</option>
-      <option ng-click="checkAttendance('attendanceSy1415')">Absence Sy1415</option>
-      <option ng-click="checkAttendance('attendanceYtd')">Absence Ytd</option>
-      <option ng-click="checkAttendance('attendanceYtdFilter')">Absence YtdFilter</option>
-      <option ng-click="checkAttendance('percentDaysLateSy1415')">percentDaysLateSy1415</option>
-      <option ng-click="checkAttendance('percentDaysLateYtd')">percentDaysLateYtd</option>
-      <option ng-click="checkAttendance('numberOfDaysAbsentLast10Days')">numberOfDaysAbsentLast10Days</option>
-      <option ng-click="checkAttendance('numberOfDaysAbsentLast5Days')">numberOfDaysAbsentLast5Days</option>
-   </select> -->
 
-Absence Types:
-<input type="radio" ng-model="value" value="Absence 8th Grade" ng-change="checkAttendance('attendance8thGrade')"> 8th Grade
+<h3> Filter Student Absence By: </h3>
 
-<input type="radio" ng-model="value" value="Absence Sy1213" ng-change="checkAttendance('attendanceSy1213')"> Sy1213
 
-<input type="radio" ng-model="value" value="Absence Sy1314" ng-change="checkAttendance('attendanceSy1314')"> Sy1314
 
-Sy1415: <br>
-<input type="radio" ng-model="value" value="Absence Sy1415" ng-change="checkAttendance('attendanceSy1415')"> Sy1415
-<input type="radio" ng-model="value" value="percentDaysLateSy1415" ng-change="checkAttendance('attendanceSy1415')" > % Days Late Sy1415 <br>
+School Year (SY): <br>
+<input type="radio" ng-model="value" value="Absence Sy1213" ng-change="checkAttendance('attendanceSy1213')"> 1213
 
-Ytd: <br>
-<input type="radio" ng-model="value" value="Absence Ytd" ng-change="checkAttendance('attendanceYtd')"> Ytd
-<input type="radio" ng-model="value" value="Absence YtdFilter" ng-change="checkAttendance('attendanceYtdFilter')"> YtdFilter
+<input type="radio" ng-model="value" value="Absence Sy1314" ng-change="checkAttendance('attendanceSy1314')"> 1314
+
+<input type="radio" ng-model="value" value="Absence Sy1415" ng-change="checkAttendance('attendanceSy1415')"> 1415
+
+<input type="radio" ng-model="value" value="percentDaysLateSy1415" ng-change="checkAttendance('attendanceSy1415')" > % Days late 1415 <br>
+
+Year-to-date (Ytd) <br>
+<input type="radio" ng-model="value" value="Absence Ytd" ng-change="checkAttendance('attendanceYtd')"> Ytd <br>
+<input type="radio" ng-model="value" value="Absence YtdFilter" ng-change="checkAttendance('attendanceYtdFilter')"> YtdFilter <br>
+
 <input type="radio" ng-model="value" value="percentDaysLateYtd" ng-change="checkAttendance('percentDaysLateYtd')"> % Days Late Ytd <br>
 
 number Of Days Absent: <br>
-  <input type="radio" ng-model="value" value="numberOfDaysAbsentLast5Days" ng-change="checkAttendance('numberOfDaysAbsentLast5Days')"> Last 5 Days:
-  <input type="radio" ng-model="value" value="numberOfDaysAbsentLast10Days" ng-change="checkAttendance('numberOfDaysAbsentLast10Days')"> Last 10 Days:
+  <input type="radio" ng-model="value" value="numberOfDaysAbsentLast5Days" ng-change="checkAttendance('numberOfDaysAbsentLast5Days')"> Last 5 Days
+
+  <input type="radio" ng-model="value" value="numberOfDaysAbsentLast10Days" ng-change="checkAttendance('numberOfDaysAbsentLast10Days')"> Last 10 Days
 </div>
 
 All Students:
