@@ -4,6 +4,7 @@ angular.module('myApp')
 
   $scope.students = [];
   $scope.absentStudents = [];
+  $scope.absFilter = false;
 
   $scope.loadStudentInfo = function() {
     console.log('inside loadStudentInfo func');
@@ -18,20 +19,15 @@ angular.module('myApp')
   };
 
   $scope.checkAttendance = function(attendanceType) {
-    // console.log('check attendance func initiated');
-    // console.log('attendance type is ', attendanceType);
-    // console.log('scope.students size is ');
-    // console.log($scope.students.length);
-    // $scope.byAbs = true;
-    var absenceWindow = attendanceType;
-
+    $scope.absWindow = attendanceType;
+    $scope.absFilter = true;
     angular.forEach($scope.students, function(student){
-       console.log(student.studentEmail, student.studentEmail.length);
+       // console.log(student.studentEmail, student.studentEmail.length);
        if ( (student.attendanceType == 0) || (student.attendanceType == "") || (student.studentEmail.length == 0) ) {
-        console.log('emptyyy');
-        $scope.absentStudents << student;
+        // console.log('emptyyy');
+        // console.log(student);
+        $scope.absentStudents.push(student);
       }
-      return $scope.absentStudents;
     })
   }
 
