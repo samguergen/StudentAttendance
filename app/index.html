@@ -7,7 +7,7 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
     <link rel="stylesheet" href="styles/index.css" />
   </head>
-  <body ng-controller="AppCtrl">
+  <body ng-controller="AppCtrl" loadStudentInfo()>
 
 <h1> Student Attendance Dashboard </h1>
 
@@ -17,9 +17,11 @@
 
 <div class="threshold">
   <p> Modify Threshold: </p>
+
+  <a ng-click="checkAttendance(attendance8thGrade)">Click mee</a>
 </div>
 
-<p> <a ng-click="loadStudentInfo()"> Click here to load data.</a> </p>
+<!-- <p> <a ng-click="loadStudentInfo()"> Click here to load data.</a> </p> -->
 <table>
 <!--     <tr>
         <th>Id</th>
@@ -41,16 +43,11 @@
         <td>{{ student.schoolName }}</td>
         <td>{{ student.gender }}</td>
         <td>{{ student.studentEmail }}</td>
-<!--         <td>{{ student.status }}</td>
-        <td>{{ student.dischargeCode }}</td>
-        <td>{{ student.code }}</td>
-        <td>{{ student.officialClass }}</td>
-        <td>{{ student.dbn }}</td>
-        <td>{{ student.admitDate }}</td>
-         -->
         <td>{{ student.ethnicity }}</td>
+      </tr>
 
 Attendance:
+      <tr>
         <td>{{ student.attendance8thGrade }}</td>
         <td>{{ student.attendanceSy1213 }}</td>
         <td>{{ student.attendanceSy1314 }}</td>

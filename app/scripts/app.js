@@ -20,8 +20,5 @@ angular.module('myApp', ['ui.router'])
       requireBase: false
     });
   });
-    // .run(function() {
-    //   console.log('angular app running');
-    // });
 
 
