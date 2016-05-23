@@ -11,3 +11,15 @@ th {
 tr td {
   padding: 1px 10px 5px 1px;
 }
+
+.absence-type select {
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   }
