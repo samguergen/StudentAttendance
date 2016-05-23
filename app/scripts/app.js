@@ -6,6 +6,11 @@ angular.module('myApp', ['ui.router'])
             url: '/home',
             templateUrl: '../index.html',
             controller: 'AppCtrl'
+        })
+        .state('all', {
+            url: '/all',
+            templateUrl: '../views/all.html',
+            controller: 'AppCtrl'
         });
         // .state('signup', {
         //     url: '/signup',
