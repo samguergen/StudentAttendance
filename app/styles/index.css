@@ -23,3 +23,7 @@ tr td {
    height: 34px;
    -webkit-appearance: none;
    }
+
+  .threshold {
+    padding: 40px;
+  }
