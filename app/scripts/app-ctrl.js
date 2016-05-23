@@ -44,9 +44,10 @@ angular.module('myApp')
   // }
 
   $scope.checkAttendance = function(attendanceType) {
+    var absenceWindow = attendanceType;
     console.log('check attendance func initiated');
     for (var student in $scope.students) {
-      if ((student[attendanceType] == 0) || (student[attendanceType] == "")) {
+      if ((student[absenceWindow] == 0) || (student[absenceWindow] == "")) {
          $scope.absentStudents << student;
      }
     }
