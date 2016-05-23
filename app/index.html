@@ -26,54 +26,31 @@ List of Chronically Absent Students:
       <option ng-click="checkAttendance('numberOfDaysAbsentLast5Days')">numberOfDaysAbsentLast5Days</option>
    </select> -->
 
- Absence 8th Grade:
- <input type="radio" ng-model="value" value="Absence 8th Grade" ng-change="checkAttendance('attendance8thGrade')"> <br>
- Absence Sy1213:
+Absence Types:
+8th Grade:
+  <input type="radio" ng-model="value" value="Absence 8th Grade" ng-change="checkAttendance('attendance8thGrade')"> <br>
+ Sy1213:
  <input type="radio" ng-model="value" value="Absence Sy1213" ng-change="checkAttendance('attendanceSy1213')"> <br>
-  Absence Sy1314:
+  Sy1314:
   <input type="radio" ng-model="value" value="Absence Sy1314" ng-change="checkAttendance('attendanceSy1314')"><br>
-  Absence Sy1415:
+  Sy1415:
   <input type="radio" ng-model="value" value="Absence Sy1415" ng-change="checkAttendance('attendanceSy1415')"><br>
-  Absence Ytd:
+  Ytd:
   <input type="radio" ng-model="value" value="Absence Ytd" ng-change="checkAttendance('attendanceYtd')"><br>
-  Absence YtdFilter:
+  YtdFilter:
   <input type="radio" ng-model="value" value="Absence YtdFilter" ng-change="checkAttendance('attendanceYtdFilter')"><br>
-  percentDaysLateSy1415:
+  % Days Late Sy1415:
   <input type="radio" ng-model="value" value="percentDaysLateSy1415" ng-change="checkAttendance('attendanceSy1415')" ><br>
-  percentDaysLateYtd:
+  % Days Late Ytd:
   <input type="radio" ng-model="value" value="percentDaysLateYtd" ng-change="checkAttendance('percentDaysLateYtd')"><br>
-  numberOfDaysAbsentLast10Days:
-  <input type="radio" ng-model="value" value="numberOfDaysAbsentLast10Days" ng-change="checkAttendance('numberOfDaysAbsentLast10Days')"><br>
-  numberOfDaysAbsentLast5Days:
+  number Of Days Absent: <br>
+  Last 5 Days:
   <input type="radio" ng-model="value" value="numberOfDaysAbsentLast5Days" ng-change="checkAttendance('numberOfDaysAbsentLast5Days')"><br>
-
+  Last 10 Days:
+  <input type="radio" ng-model="value" value="numberOfDaysAbsentLast10Days" ng-change="checkAttendance('numberOfDaysAbsentLast10Days')"><br>
 </div>
 
 All Students:
-<!--
-<table id="table-all-students" ng-hide="'byAbs' == true" >
-    <tr ng-repeat="student in students">
-        <td>{{ student.studentId }}</td>
-        <td>{{ student.studentName }}</td>
-        <td>{{ student.cohort }}</td>
-        <td>{{ student.schoolName }}</td>
-        <td>{{ student.gender }}</td>
-        <td>{{ student.studentEmail }}</td>
-        <td>{{ student.ethnicity }}</td>
-    </tr>
-      <tr>
-        <td>{{ student.attendance8thGrade }}</td>
-        <td>{{ student.attendanceSy1213 }}</td>
-        <td>{{ student.attendanceSy1314 }}</td>
-        <td>{{ student.attendanceSy1415 }}</td>
-        <td>{{ student.percentDaysLateSy1415 }}</td>
-        <td>{{ student.attendanceYtd }}</td>
-        <td>{{ student.percentDaysLateYtd }}</td>
-        <td>{{ student.numberOfDaysAbsentLast10Days }}</td>
-        <td>{{ student.numberOfDaysAbsentLast5Days }}</td>
-        <td>{{ student.attendanceYtdFilter }}</td>
-    </tr>
-</table> -->
 
 Absent Students for:
  {{ absWindow }}
