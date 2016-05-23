@@ -11,16 +11,19 @@
 
 <h1> Student Attendance Dashboard </h1>
 
-<div class="absent-list">
+<!-- <div class="absent-list">
   List of Chronically Absent Students: <br>
-</div>
+</div> -->
+
+  <p> <a ng-click="loadStudentInfo()"> Click Here to Load All Student Data</a> </p>
+
+<!--   <a ng-click="checkAttendance(attendance8thGrade)">Click mee</a>
+</div> -->
+
+List of Chronically Absent Students:
 
 <div class="threshold">
-  <p> Modify Threshold: </p>
-
-  <a ng-click="checkAttendance(attendance8thGrade)">Click mee</a>
-</div>
-
+  Modify Threshold:
 <div class="absence-type">
    <select>
       <option ng-click="checkAttendance(attendance8thGrade)">Absence 8th Grade</option>
@@ -34,40 +37,24 @@
    </select>
 </div>
 
-attendanceSy1213
-attendanceSy1314
-attendanceSy1415
-percentDaysLateSy1415
-attendanceYtd
-percentDaysLateYtd
-numberOfDaysAbsentLast10Days
-numberOfDaysAbsentLast5Days
-attendanceYtdFilter
 
-<!-- <p> <a ng-click="loadStudentInfo()"> Click here to load data.</a> </p> -->
+
 <table>
 <!--     <tr>
         <th>Id</th>
         <th>First Name</th>
         <th>Last Name</th>
     </tr> -->
-<!--     <tr ng-repeat="person in people">
-        <td>{{person.id}}</td>
-        <td>{{person.firstName}}</td>
-        <td>{{person.lastName}}</td>
-    </tr> -->
+    <tr ng-repeat="student in students">
 
-
-        <tr ng-repeat="student in students">
-
-       <td>{{ student.studentId }}</td>
+        <td>{{ student.studentId }}</td>
         <td>{{ student.studentName }}</td>
         <td>{{ student.cohort }}</td>
         <td>{{ student.schoolName }}</td>
         <td>{{ student.gender }}</td>
         <td>{{ student.studentEmail }}</td>
         <td>{{ student.ethnicity }}</td>
-      </tr>
+    </tr>
 
 Attendance:
       <tr>
